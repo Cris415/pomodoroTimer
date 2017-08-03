@@ -1,0 +1,90 @@
+html, body{
+  background-image: url('http://www.bakermckenzie.com/-/media/images/locations/italy1.jpg');
+  margin: 0;
+  padding: 0;
+  height:100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color:white;
+  font-family: Helvetica, sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#app{
+  height:auto;
+  width: 95%;
+  display:grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  background-color: rgba(150, 150, 150, 0.51);
+  padding: 10px;
+}
+
+.button{
+  font-size: 3rem;
+  height: auto;
+  border: 0.5px;
+  margin: 2px;
+  border-style: solid;
+  border-color: white;
+}
+
+#timer{
+  height: auto;
+  display: grid;
+  grid-row: 1/  span 2;
+  grid-column: 1/  span 3;
+  justify-items: center;
+  align-items: center;
+  font-size: 10em;
+}
+
+#playPs{
+  grid-row:3/ span 1;
+  grid-column: 1/ span 1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+#reset{
+  grid-row:3/ span 1;
+  grid-column: 2/ span 1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+#repeat{
+  grid-row:3/ span 1;
+  grid-column: 3/ span 1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#custTmr{
+  grid-row:4/ span 1;
+  grid-column: 1/ span 1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+#custBrk{
+  grid-row:4/ span 1;
+  grid-column: 3/ span 1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+#sessionCntr{
+  font-size: 2.5rem;
+  grid-row:5/ span 1;
+  grid-column: 2 /span 1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}

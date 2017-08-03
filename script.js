@@ -4,16 +4,9 @@ var seconds = 0;
 var minutes = 0;
 var hours = 0;
 var lengthOfTimer = 5; //seconds;
-function timerDone(lengthOfTime) {
-  if (lengthOfTime === secondsElapsed) {
-    clearTimeout(myVar);
-  }
-}
+
 
 function myTimer() {
-  // var d = new Date();
-  // // document.getElementById("display").innerHTML = d.toLocaleTimeString();
-
   secondsElapsed++;
   seconds++;
   timerDone(lengthOfTimer);
@@ -38,4 +31,10 @@ function twoDigits(num) {
     return num;
   }
   return num;
+}
+
+function timerDone(lengthOfTime) {
+  if (lengthOfTime === secondsElapsed) {
+    clearTimeout(myVar);
+  }
 }

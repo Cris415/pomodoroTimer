@@ -1,16 +1,41 @@
 <!DOCTYPE html>
- <html>
+<html>
 
- <head>
+<head>
   <meta charset="UTF-8">
-   <title>Pomodoro Timer</title>
-   <link rel="stylesheet" type="text/css" href="style.css">
- </head>
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+</head>
 
 <body>
-<h1>Pomodoro Timer</h1>
-<div class="display"></div>
+
+  <div id="app">
+
+    <div id="timer">25:00</div>
+
+      <span id="sessionCntr">Sesions: 3</span>
+
+      <div id="playPs" class="button">
+        <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 5v14l11-7z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+      </div>
+
+      <div id="reset" class="button">reset</div>
+      <div id="repeat" class="button">repeat</div>
+
+
+        <div id="custTmr">session length<br><form>
+          <input id="number" type="number" value="25">
+        </div>
+        <div id="custBrk">break length<input id="number" type="number" value="25"></div>
+
+
+  </div>
 
 </body>
+
 </html>
 <script type="text/javascript" src="script.js"></script>
