@@ -8,6 +8,7 @@ var breakRunning = false;
 var newSession;
 var session = 1;
 var pauseFlag = false;
+var audio = new Audio('http://www.accesscontrolsales.com/Ingram_Products/mp3/pb525dch-x.mp3');
 
 function myTimer() {
 	secondsElapsed++;
@@ -33,10 +34,12 @@ function timerDone(lengthOfTimer, timePassed) {
 		if (timerRunning) {
 			timerRunning = false;
 			breakRunning = true;
+			audio.play();
 			move.clear();
 		} else {
 			timerRunning = true;
 			breakRunning = false;
+			audio.play();
 			move.clear();
 			if (!repeat) {
 				clearInterval(newSession);
@@ -48,6 +51,7 @@ function timerDone(lengthOfTimer, timePassed) {
 		}
 	}
 }
+
 document.getElementById("start").addEventListener("click", timerStart);
 
 function timerStart() {
