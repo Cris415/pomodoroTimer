@@ -1,43 +1,37 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Pomodoro Timer</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  </head>
 
-<body>
+  <body>
 
-  <div id="app">
-
-    <div id="timer">25:00</div>
-
-      <label id="sessionCntr">Sesions: 3</label>
-
-      <div id="playPs" class="button">
-        <!-- <svg fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M8 5v14l11-7z"/>
-          <path d="M0 0h24v24H0z" fill="none"/>
-        </svg> -->
-
-        start
+    <div id="app">
+      <div id="myProgress">
+        <div id="myBar"></div>
+        <div id="timer" class="text">25:00</div>
       </div>
-
-      <div id="reset" class="button">reset</div>
-      <div id="repeat" class="button">repeat</div>
-      <div id="pause" class="button">pause</div>
-
-        <div id="custTmr">session length<br><form>
-          <input id="number" type="number" value="25">
-        </div>
-        <div id="custBrk">break length<input id="number" type="number" value="25"></div>
-
-
-  </div>
-
-</body>
-
+      <label id="ssnCounter">session: 1</label>
+      <div id="running"></div>
+      <button id="start" class="text" type="button"> start</button>
+      <button id="pause" type="button">pause</button>
+      <button id="reset" type="button">reset</button>
+      <button id="repeat" class="" type="button">repeat</button>
+      <div id="custTmr">
+        <button id="ssnDown" type="button"> - </button>
+        <span id="ssnLength">session 25min</span>
+        <button id="ssnAdd" type="button"> + </button>
+      </div>
+      <div id="custBrk">
+        <button id="brkDown" type="button"> - </button>
+        <span id="brkLength">break 5min</span>
+        <button id="brkUp" type="button"> + </button>
+      </div>
+    </div>
+  </body>
 </html>
 <script type="text/javascript" src="script.js"></script>

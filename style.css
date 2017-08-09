@@ -1,99 +1,169 @@
-html, body{
-  background-image: url('http://www.bakermckenzie.com/-/media/images/locations/italy1.jpg');
-  margin: 0;
-  padding: 0;
-  height:100%;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color:white;
-  font-family: Helvetica, sans-serif;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+html, body {
+	background-image: url('http://www.bakermckenzie.com/-/media/images/locations/italy1.jpg');
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+	font-family: Helvetica, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#brkLength, #ssnLength {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+#ssnDown, #brkDown {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+#myProgress {
+	border-radius: 25px 25px 0 0;
+	width: 100%;
+	height: auto;
+	display: grid;
+	grid-row: 1/ span 2;
+	grid-column: 1/ span 3;
+}
+#myBar {
+	border-radius: 25px 25px 25px 25px;
+	width: .005%;
+	height: 100%;
+	background-color: green;
+	background-color: rgba(0, 255, 0, 0.30);
+}
+button {
+	background-color: black;
+	background-color: rgba(50, 50, 50, 0.80);
+	width: auto;
+	border: none;
+	font-family: inherit;
+	font-size: 2.5rem;
+	color: white;
+	overflow: auto;
+	padding: 4px;
+}
+button:active {
+	color: black;
+}
+.text {
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+#app {
+	height: auto;
+	width: 90%;
+	display: grid;
+	grid-template-rows: repeat(5, 1fr);
+	grid-template-columns: repeat(3, 1fr);
+	background-color: gray;
+	background-color: rgba(50, 50, 50, 0.61);
+	padding: 10px;
+	border-radius: 25px;
+	overflow: auto;
 }
 
-#app{
-  height:auto;
-  width: 95%;
-  display:grid;
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  background-color: rgba(50, 50, 50, 0.61);
-  padding: 10px;
-  border-radius: 25px;
+#timer {
+	justify-content: center;
+	align-items: center;
+	font-size: 5em;
 }
 
-.button{
-  font-size: 3rem;
-  height: auto;
-  border: 0.5px;
-  margin: 2px;
-  border-style: solid;
-  border-color: rgba(250, 250, 250, 0.50);
+#start {
+	grid-row: 3/ span 1;
+	grid-column: 1/ span 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#reset {
+	grid-row: 3/ span 1;
+	grid-column: 3/ span 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#repeat {
+	grid-row: 4/ span 1;
+	grid-column: 2/ span 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.repeatActive {
+	box-shadow: inset 0 0 10px 3px rgba(0, 0, 0, 0.67);
 }
 
-#timer{
-  height: auto;
-  display: grid;
-  grid-row: 1/  span 2;
-  grid-column: 1/  span 3;
-  justify-items: center;
-  align-items: center;
-  font-size: 10em;
+#pause {
+	grid-row: 3/ span 1;
+	grid-column: 2/ span 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#running {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+}
+#custTmr {
+	grid-row: 4/ span 1;
+	grid-column: 1/ span 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#custBrk {
+	grid-row: 4/ span 1;
+	grid-column: 3/ span 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#ssnCounter {
+	font-size: 2.0rem;
+	grid-row: 5/ span 1;
+	grid-column: 2 /span 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-#playPs{
-  grid-row:3/ span 1;
-  grid-column: 1/ span 1;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+@media (max-width: 460px) {
+	#app {
+		display: grid;
+		grid-template-rows: repeat(6, 1fr);
+		grid-template-columns: repeat(2, 1fr);
+	}
+	#reset {
+		grid-row: 4/ span 1;
+		grid-column: 1/ span 1;
+	}
+	#repeat {
+		grid-row: 4/ span 1;
+		grid-column: 2/ span 1;
+	}
+	#custTmr {
+		grid-row: 5/ span 1;
+		grid-column: 1/ span 1;
+	}
+	#custBrk {
+		grid-row: 5/ span 1;
+		grid-column: 2/ span 1;
+	}
+	#running {
+		grid-row: 6/ span 1;
+		grid-column: 1 /span 1;
+	}
 
-}
-#reset{
-  grid-row:3/ span 1;
-  grid-column: 2/ span 1;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-#repeat{
-  grid-row:3/ span 1;
-  grid-column: 3/ span 1;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-#custTmr{
-  grid-row:4/ span 1;
-  grid-column: 1/ span 1;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-#custBrk{
-  grid-row:4/ span 1;
-  grid-column: 3/ span 1;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-#sessionCntr{
-  font-size: 2.5rem;
-  grid-row:5/ span 1;
-  grid-column: 2 /span 1;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
+	#ssnCounter {
+		grid-row: 6/ span 1;
+		grid-column: 2 /span 1;
+	}
 }
 
-#pause{
-  grid-row:4/ span 1;
-  grid-column: 2/ span 1;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
